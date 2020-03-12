@@ -1,14 +1,14 @@
-# react-native-circular-timer
+# react-native-circle-svg-timer
 
 Circular Timer component for React Native
 
 <a href="https://twitter.com/intent/follow?screen_name=meharbhutta">
-    <img 
+    <img
         src="https://img.shields.io/twitter/follow/meharbhutta.svg?style=social&logo=twitter"
         alt="follow on Twitter"
     >
 </a>
-
+<!-- 
 ## NPM
 
 - stable release version: ![version](https://img.shields.io/badge/version-1.1.4-blue.svg?cacheSeconds=2592000)
@@ -55,7 +55,7 @@ export default class App extends Component<Props> {
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: 'white'
+          backgroundColor: 'white',
         }}
       >
         <CircularTimer
@@ -70,7 +70,7 @@ export default class App extends Component<Props> {
           style={{
             marginTop: 20,
             borderRadius: 6,
-            backgroundColor: '#000000'
+            backgroundColor: '#000000',
           }}
         >
           <Text
@@ -78,7 +78,7 @@ export default class App extends Component<Props> {
               padding: 16,
               fontSize: 18,
               color: 'white',
-              fontWeight: 'bold'
+              fontWeight: 'bold',
             }}
           >
             Restart Timer
@@ -112,7 +112,8 @@ export default class App extends Component<Props> {
 | :------ | :------------------------- |
 | restart | To restart the timer again |
 
-### Note: 
+### Note:
+
 Firstly, you need to create reference of the component and then call the restart method using that reference [GUIDE](https://stackoverflow.com/questions/37949981/call-child-method-from-parent).
 
 ### To run example
@@ -126,7 +127,7 @@ npx react-native run-ios (For ios)
 
 #### In case of any issue follow the [GUIDE](https://facebook.github.io/react-native/docs/getting-started).
 
-### Supported React Native Versions  
+### Supported React Native Versions
 
 This project aims to support any version of React Native.
 
@@ -138,4 +139,4 @@ The idea for this modules came from MrToph react-native-countdown-circle package
 
 ### Licenses
 
-CircularTimer - MIT © MeharBhutta
+CircularTimer - MIT © MeharBhutta -->
