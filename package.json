@@ -1,6 +1,6 @@
 {
-  "name": "react-native-circular-timer",
-  "version": "1.1.4",
+  "name": "react-native-circle-svg-timer",
+  "version": "0.0.1",
   "description": "Circular Timer component for React Native",
   "main": "src/index.js",
   "types": "src/index.d.ts",
@@ -51,16 +51,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/meharbhutta/react-native-circular-timer.git"
+    "url": ""
   },
-  "author": "Muhammad Mehar <meharbhutta@gmail.com> (https://twitter.com/meharbhutta)",
+  "author": "",
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/meharbhutta/react-native-circular-timer/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/meharbhutta/react-native-circular-timer#readme",
+  "homepage": "",
   "scripts": {
     "lint": "eslint index.js --max-warnings=0",
     "lint:staged": "lint-staged",
