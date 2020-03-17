@@ -2,6 +2,10 @@
 
 Circular Timer component for React Native based on react-native-svg
 
+## Example
+
+![image](/example/react-native-circle-svg-timer.gif)
+
 <!--
 ## NPM
 

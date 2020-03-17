@@ -1,4 +1,4 @@
-declare module 'react-native-circular-timer' {
+declare module 'react-native-circle-svg-timer' {
   import { ViewStyle, TextStyle } from 'react-native';
 
   /**

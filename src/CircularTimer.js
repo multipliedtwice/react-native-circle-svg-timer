@@ -10,8 +10,11 @@ export const CircularTimer = ({
   fillColor = 'white',
   strokeColor = 'red',
 }) => {
-  const { RotateData, circumference } = useCircularTimer({ radius, duration });
-  const AnimatedCircle = Animated.createAnimatedComponent(Circle);
+  const { RotateData, circumference, AnimatedCircle } = useCircularTimer({
+    radius,
+    duration,
+  });
+
   return (
     <Svg
       width={radius * 2 + strokeWidth * 2}
@@ -27,6 +30,13 @@ export const CircularTimer = ({
         strokeWidth={strokeWidth}
         strokeDashoffset={RotateData}
         stroke={strokeColor}
+      />
+
+      <Circle
+        cx={radius + strokeWidth}
+        cy={radius + strokeWidth}
+        r={radius - strokeWidth / 2}
+        fill={'grey'}
       />
     </Svg>
   );

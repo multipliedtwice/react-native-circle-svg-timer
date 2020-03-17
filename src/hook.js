@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Animated } from 'react-native';
+import { Circle } from 'react-native-svg';
 
 export const useCircularTimer = ({ radius, duration }) => {
   const circumference = 2 * Math.PI * radius;
@@ -22,9 +23,10 @@ export const useCircularTimer = ({ radius, duration }) => {
     inputRange: [0, 1],
     outputRange: [circumference, 0],
   });
-
+  const AnimatedCircle = Animated.createAnimatedComponent(Circle);
   return {
     RotateData,
     circumference,
+    AnimatedCircle,
   };
 };
