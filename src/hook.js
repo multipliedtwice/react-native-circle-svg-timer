@@ -1,23 +1,30 @@
 import { useEffect, useState } from 'react';
+import { Animated } from 'react-native';
 
-export const useCircularTimer = ({ radius, totalTime }) => {
+export const useCircularTimer = ({ radius, duration }) => {
   const circumference = 2 * Math.PI * radius;
-  const [dashOffset, setDashOffset] = useState(0);
-
-  const animation = () => {
-    return setDashOffset(prev => {
-      return prev <= 0 ? circumference : prev - 0.225;
-    });
-  };
-
+  const [dashOffset] = useState(new Animated.Value(0));
   useEffect(() => {
-    const timer = setInterval(animation, circumference / totalTime);
-
-    return () => clearInterval(timer);
+    StartImageRotate();
   }, []);
 
+  function StartImageRotate() {
+    dashOffset.setValue(0);
+
+    Animated.timing(dashOffset, {
+      toValue: 1,
+      duration: duration * 1000,
+      useNativeDriver: true,
+    }).start(() => StartImageRotate());
+  }
+
+  const RotateData = dashOffset.interpolate({
+    inputRange: [0, 1],
+    outputRange: [circumference, 0],
+  });
+
   return {
-    dashOffset,
+    RotateData,
     circumference,
   };
 };

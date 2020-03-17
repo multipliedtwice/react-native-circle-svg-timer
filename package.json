@@ -61,13 +61,6 @@
     "url": "https://github.com/meharbhutta/react-native-circular-timer/issues"
   },
   "homepage": "https://github.com/meharbhutta/react-native-circular-timer#readme",
-  "lint-staged": {
-    "*.js": [
-      "yarn validate",
-      "git add"
-    ]
-  },
-  "pre-commit": "lint:staged",
   "scripts": {
     "lint": "eslint index.js --max-warnings=0",
     "lint:staged": "lint-staged",
