@@ -4,7 +4,7 @@ Circular Timer component for React Native based on react-native-svg
 
 ## Example
 
-![image](/example/react-native-circle-svg-timer.gif)
+![image](react-native-circle-svg-timer.gif)
 
 ## Getting Started
 
