@@ -1,14 +1,14 @@
 import React from 'react';
 import Svg, { Circle } from 'react-native-svg';
 import { useCircularTimer } from './hook';
-import { Animated } from 'react-native';
 
 export const CircularTimer = ({
   duration = 15,
   radius = 30,
-  strokeWidth = 5,
-  fillColor = 'white',
-  strokeColor = 'red',
+  strokeWidth = 10,
+  fillColor = 'transparent',
+  strokeColor = 'lightblue',
+  strokeBgColor = 'grey',
 }) => {
   const { RotateData, circumference, AnimatedCircle } = useCircularTimer({
     radius,
@@ -21,6 +21,15 @@ export const CircularTimer = ({
       height={radius * 2 + strokeWidth * 2}
       style={{ transform: [{ rotate: '-90deg' }] }}
     >
+      <Circle
+        cx={radius + strokeWidth}
+        cy={radius + strokeWidth}
+        r={radius}
+        fill={fillColor}
+        strokeWidth={strokeWidth}
+        stroke={strokeBgColor}
+      />
+
       <AnimatedCircle
         cx={radius + strokeWidth}
         cy={radius + strokeWidth}
@@ -32,11 +41,12 @@ export const CircularTimer = ({
         stroke={strokeColor}
       />
 
+      {/* Circle for creating stroke outline effect */}
       <Circle
         cx={radius + strokeWidth}
         cy={radius + strokeWidth}
         r={radius - strokeWidth / 2}
-        fill={'grey'}
+        fill={fillColor}
       />
     </Svg>
   );
