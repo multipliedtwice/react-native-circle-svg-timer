@@ -27,7 +27,7 @@
     "minimist": "1.2.3",
     "pre-commit": "1.2.2",
     "prettier": "^1.18.2",
-    "simple-git": "1.124.0",
+    "simple-git": "3.3.0",
     "typescript": "next"
   },
   "keywords": [
